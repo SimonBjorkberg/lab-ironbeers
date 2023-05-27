@@ -4,8 +4,15 @@
     <div>
       <h5>{{this.name}}</h5>
       <p>{{this.description}}</p>
-      <h5>
-      </h5>
+      <br>
+      <h4>Food Pairing</h4>
+      <ul>
+        {{#each this.food_pairing}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      <br>
+      <p><strong>Brewers Tips: </strong> {{this.brewers_tips}}</p>
     </div>
   </div>
 </div>

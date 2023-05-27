@@ -31,16 +31,23 @@ punkAPI
   })
   .catch(error => console.log(error));
 
+//INDEX PAGE
+
 app.get('/', (req, res) => {
   res.render('index');
 });
+
+//ALL THE BEERS
 app.get('/beers', (req, res) => {
   res.render('beers', { beers });
 });
+
+//RANDOM BEER
 app.get('/random-beer', (req, res) => {
   punkAPI
   .getRandom()
   .then(beerFromApi => {
+    console.log(beerFromApi)
     beer = beerFromApi;
   })
   .catch(error => console.log(error));
